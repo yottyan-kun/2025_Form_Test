@@ -33,7 +33,9 @@ namespace Form_Test
                     testButton.Size = new Size(50, 50);
 
                     //ボタン内のテキストを設定
-                    testButton.Text = "あいうえお";
+                    testButton.Text = "";
+
+                    testButton.Click += テストボタン_Click_1;
 
                     //コントロールにボタンを追加
                     Controls.Add(testButton);
