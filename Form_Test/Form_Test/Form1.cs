@@ -12,19 +12,25 @@ namespace Form_Test
 {
     public partial class Form1 : Form
     {
+        const int BUTTON_SIZE_X = 100;
+        const int BUTTON_SIZE_Y = 100;
+
+        const int BOARD_SIZE_X = 3;
+        const int BOARD_SIZE_Y = 3;
+
         public Form1()
         {
             InitializeComponent();
 
 
-            for (int j = 0; j < 3; j++)
+            for (int j = 0; j < BOARD_SIZE_Y; j++)
             {
 
 
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < BOARD_SIZE_X; i++)
                 {
                     //インスタンスの生成
-                    TestButton testButton = new TestButton(new Point(50 * i, 50 * j), new Size(50, 50 )," ");
+                    TestButton testButton = new TestButton(new Point(BUTTON_SIZE_X * i, BUTTON_SIZE_Y * j), new Size(100, 100 )," ");
 
 
                     testButton.Click += テストボタン_Click_1;
