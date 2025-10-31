@@ -18,9 +18,13 @@ namespace Form_Test
         const int BOARD_SIZE_X = 3;
         const int BOARD_SIZE_Y = 3;
 
+        private TestButton[,] _buttonArray;
+
         public Form1()
         {
             InitializeComponent();
+
+            _buttonArray = new TestButton[BOARD_SIZE_Y, BOARD_SIZE_X];
 
 
             for (int j = 0; j < BOARD_SIZE_Y; j++)
@@ -33,13 +37,15 @@ namespace Form_Test
                     TestButton testButton = new TestButton(new Point(BUTTON_SIZE_X * i, BUTTON_SIZE_Y * j), new Size(100, 100 )," ");
 
 
-                    testButton.Click += テストボタン_Click_1;
+                    //配列にボタンの参照を追加
+                    _buttonArray[j, i] = testButton;
 
                     //コントロールにボタンを追加
                     Controls.Add(testButton);
 
                 }
             }
+            _buttonArray[1, 0].SetEnable(true);
         }
 
         private void hogehogeClick(object sender , EventArgs e)
@@ -51,7 +57,7 @@ namespace Form_Test
 
         private void テストボタン_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("おはようございます");
+           
         }
     }
 }

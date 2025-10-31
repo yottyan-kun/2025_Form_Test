@@ -10,7 +10,7 @@ namespace Form_Test
 {
     internal class TestButton : Button
     {
-        private Color _onColor = Color.LightBlue;
+        private Color _onColor = Color.Orange;
         private Color _offColor = Color.White;
 
         private bool _enable;
