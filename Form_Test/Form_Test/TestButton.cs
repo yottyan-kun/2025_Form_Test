@@ -16,6 +16,9 @@ namespace Form_Test
         private bool _enable;
         private Form1 _form1;
 
+        private int _x;
+        private int _y;
+
         public void SetEnable(bool on)
         {
             _enable = on;
@@ -30,10 +33,17 @@ namespace Form_Test
            
         }
 
-        public TestButton(Form1 form1,Point position, Size size, string text)
+        public void Toggle()
+        {
+            SetEnable(!_enable);
+        }
+
+        public TestButton(Form1 form1,int x, int y, Size size, string text)
         {
             _form1 = form1;
-            Location = position;
+            _x = x;
+            _y = y;
+            Location = new Point(x * size.Width, y * size.Height);
             Size = size;
             Text = text;
 
@@ -42,7 +52,7 @@ namespace Form_Test
         }
         private void hogehogeClick(object sender, EventArgs e)
         {
-            _form1.GetTextButton(1, 1).SetEnable(true);
+            _form1.GetTestButton(_x, _y).SetEnable(true);
           
         }
 

@@ -36,7 +36,7 @@ namespace Form_Test
                 for (int i = 0; i < BOARD_SIZE_X; i++)
                 {
                     //インスタンスの生成
-                    TestButton testButton = new TestButton(this,new Point(BUTTON_SIZE_X * i, BUTTON_SIZE_Y * j), new Size(100, 100 )," ");
+                    TestButton testButton = new TestButton(this,i,j,new Point(BUTTON_SIZE_X * i, BUTTON_SIZE_Y * j), new Size(100, 100 )," ");
 
 
                     //配列にボタンの参照を追加
@@ -44,13 +44,15 @@ namespace Form_Test
 
                     //コントロールにボタンを追加
                     Controls.Add(testButton);
-
+                    
                 }
             }
-            GetTextButton[1, 0].SetEnable(true);
+           
         }
-        public TestButton GetTextButton(int x, int y)
+        public TestButton GetTestButton(int x, int y)
         {
+            if (x < 0 || x >= BOARD_SIZE_X) return null;
+            if (y < 0 || y >= BOARD_SIZE_Y) return null;
             return _buttonArray[y, x];
         }
 
