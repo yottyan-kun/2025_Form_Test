@@ -55,6 +55,24 @@ namespace Form_Test
             _form1.GetTestButton(_x, _y).SetEnable(true);
           
         }
+        private void ClickEvent(object sender, EventArgs e)
+        {
+            //楽な書き方
+            _form1.GetTestButton(_x, _y)?.Toggle();
+            _form1.GetTestButton(_x+1, _y)?.Toggle();
+            _form1.GetTestButton(_x-1, _y)?.Toggle();
+            _form1.GetTestButton(_x, _y)?.Toggle();
+            _form1.GetTestButton(_x, _y)?.Toggle();
 
+        }
+        private int[][] _toggleDate =
+        {
+            new int[]{0,0},
+            new int[]{1,0},
+            new int[]{-1,0},
+            new int[]{0,1},
+            new int[]{0,-1},
+           
+        };
     }
 }
