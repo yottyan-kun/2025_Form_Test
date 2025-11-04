@@ -18,7 +18,9 @@ namespace Form_Test
         const int BOARD_SIZE_X = 3;
         const int BOARD_SIZE_Y = 3;
 
+
         private TestButton[,] _buttonArray;
+
 
         public Form1()
         {
@@ -34,7 +36,7 @@ namespace Form_Test
                 for (int i = 0; i < BOARD_SIZE_X; i++)
                 {
                     //インスタンスの生成
-                    TestButton testButton = new TestButton(new Point(BUTTON_SIZE_X * i, BUTTON_SIZE_Y * j), new Size(100, 100 )," ");
+                    TestButton testButton = new TestButton(this,new Point(BUTTON_SIZE_X * i, BUTTON_SIZE_Y * j), new Size(100, 100 )," ");
 
 
                     //配列にボタンの参照を追加
@@ -45,7 +47,11 @@ namespace Form_Test
 
                 }
             }
-            _buttonArray[1, 0].SetEnable(true);
+            GetTextButton[1, 0].SetEnable(true);
+        }
+        public TestButton GetTextButton(int x, int y)
+        {
+            return _buttonArray[y, x];
         }
 
         private void hogehogeClick(object sender , EventArgs e)

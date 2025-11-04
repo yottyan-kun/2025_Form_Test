@@ -14,6 +14,7 @@ namespace Form_Test
         private Color _offColor = Color.White;
 
         private bool _enable;
+        private Form1 _form1;
 
         public void SetEnable(bool on)
         {
@@ -29,8 +30,9 @@ namespace Form_Test
            
         }
 
-        public TestButton(Point position, Size size, string text)
+        public TestButton(Form1 form1,Point position, Size size, string text)
         {
+            _form1 = form1;
             Location = position;
             Size = size;
             Text = text;
@@ -40,7 +42,8 @@ namespace Form_Test
         }
         private void hogehogeClick(object sender, EventArgs e)
         {
-            SetEnable(!_enable);
+            _form1.GetTextButton(1, 1).SetEnable(true);
+          
         }
 
     }
