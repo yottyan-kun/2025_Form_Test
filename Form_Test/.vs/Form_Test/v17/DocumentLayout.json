@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\81809\\Desktop\\251021C#\\Form_Test\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C9B40C42-976A-4F3B-B67D-EE18EC7C5C82}|Form_Test\\Form_Test.csproj|c:\\users\\81809\\desktop\\251021c#\\form_test\\form_test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9B40C42-976A-4F3B-B67D-EE18EC7C5C82}|Form_Test\\Form_Test.csproj|solutionrelative:form_test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C9B40C42-976A-4F3B-B67D-EE18EC7C5C82}|Form_Test\\Form_Test.csproj|C:\\Users\\81809\\Desktop\\251021C#\\Form_Test\\form_test\\testbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9B40C42-976A-4F3B-B67D-EE18EC7C5C82}|Form_Test\\Form_Test.csproj|solutionrelative:form_test\\testbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9B40C42-976A-4F3B-B67D-EE18EC7C5C82}|Form_Test\\Form_Test.csproj|C:\\Users\\81809\\Desktop\\251021C#\\Form_Test\\form_test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C9B40C42-976A-4F3B-B67D-EE18EC7C5C82}|Form_Test\\Form_Test.csproj|solutionrelative:form_test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9B40C42-976A-4F3B-B67D-EE18EC7C5C82}|Form_Test\\Form_Test.csproj|c:\\users\\81809\\desktop\\251021c#\\form_test\\form_test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9B40C42-976A-4F3B-B67D-EE18EC7C5C82}|Form_Test\\Form_Test.csproj|solutionrelative:form_test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,37 +22,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\81809\\Desktop\\251021C#\\Form_Test\\Form_Test\\Form1.cs",
               "RelativeDocumentMoniker": "Form_Test\\Form1.cs",
               "ToolTip": "C:\\Users\\81809\\Desktop\\251021C#\\Form_Test\\Form_Test\\Form1.cs",
               "RelativeToolTip": "Form_Test\\Form1.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAWwEEAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAASwDMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T05:24:27.948Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "TestButton.cs",
               "DocumentMoniker": "C:\\Users\\81809\\Desktop\\251021C#\\Form_Test\\Form_Test\\TestButton.cs",
               "RelativeDocumentMoniker": "Form_Test\\TestButton.cs",
               "ToolTip": "C:\\Users\\81809\\Desktop\\251021C#\\Form_Test\\Form_Test\\TestButton.cs*",
               "RelativeToolTip": "Form_Test\\TestButton.cs*",
-              "ViewState": "AgIAACkAAAAAAAAAAAAWwD8AAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAWwDMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T05:05:52.336Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [\u30C7\u30B6\u30A4\u30F3]",
               "DocumentMoniker": "C:\\Users\\81809\\Desktop\\251021C#\\Form_Test\\Form_Test\\Form1.cs",
               "RelativeDocumentMoniker": "Form_Test\\Form1.cs",

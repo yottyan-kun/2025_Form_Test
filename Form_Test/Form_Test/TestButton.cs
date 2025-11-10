@@ -47,10 +47,10 @@ namespace Form_Test
             Size = size;
             Text = text;
 
-            Click += hogehogeClick;
+            Click += ClickEvent;
             SetEnable(false);
         }
-        private void hogehogeClick(object sender, EventArgs e)
+        private void ClickEvent(object sender, EventArgs e)
         {
             _form1.GetTestButton(_x, _y).SetEnable(true);
           
