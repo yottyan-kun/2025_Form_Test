@@ -20,6 +20,8 @@ namespace Form_Test
 
         private int _x;
         private int _y;
+        private int tate;
+        private int yoko;
 
         public void SetEnable(bool on)
         {
@@ -40,11 +42,13 @@ namespace Form_Test
             SetEnable(!_enable);
         }
 
-        public TestButton(Form1 form1,int x, int y, Size size, string text)
+        public TestButton(Form1 form1,int x, int y,int BOARD_X,int BOARD_Y, Size size, string text)
         {
             _form1 = form1;
             _x = x;
             _y = y;
+            tate = BOARD_X;
+            yoko = BOARD_Y;
             Location = new Point(x * size.Width, y * size.Height);
             Size = size;
             Text = text;
@@ -71,19 +75,38 @@ namespace Form_Test
         private void ClickEvent(object sender, EventArgs e)
         {
             //楽な書き方
-            for (int i = 0; i < _toggleDate.Length; i++)
-            {
-                var date = _toggleDate[i];
-                var button = _form1.GetTestButton(_x + date[0], _y + date[1]);
+            _form1.GetTestButton(_x, _y)?.Toggle();
+            _form1.GetTestButton(_x+1, _y)?.Toggle();
+            _form1.GetTestButton(_x-1, _y)?.Toggle();
+            _form1.GetTestButton(_x, _y+1)?.Toggle();
+            _form1.GetTestButton(_x, _y-1)?.Toggle();
+            //クリアと伝えるメッセージ
+            int i=0, j;
 
-                if (button != null)
+            Color same = _form1.GetTestButton(0, 0).BackColor;
+
+            bool s = true;
+            while(i < tate && s)
+            {
+                for(j = 0; j < yoko; j++)
                 {
-                    button.Toggle();
+                    if(same != _form1.GetTestButton(i,j).BackColor)
+                    {
+                        s = false;
+                        break;
+                    }
                 }
+                i++;
             }
-        }         
-        
-            
+
+            if (s == true)
+            {
+                MessageBox.Show("クリア");
+            }
+
+        }
+
+          
 
         private int[][] _toggleDate =
         {

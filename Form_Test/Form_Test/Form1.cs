@@ -37,7 +37,7 @@ namespace Form_Test
                 for (int j = 0; j < BOARD_SIZE_Y; j++)
                 {
                     //インスタンスの生成
-                    TestButton testButton = new TestButton(this,i,j,new Size(BUTTON_SIZE_X , BUTTON_SIZE_Y), "");
+                    TestButton testButton = new TestButton(this, i, j,BOARD_SIZE_X,BOARD_SIZE_Y, new Size(BUTTON_SIZE_X, BUTTON_SIZE_Y), "");
 
 
                     //配列にボタンの参照を追加
@@ -45,17 +45,33 @@ namespace Form_Test
 
                     //コントロールにボタンを追加
                     Controls.Add(testButton);
-                    
+
                 }
             }
-           
+
+
+
+            /// <summary>
+            /// TestButtonを取得する関数
+            /// </summary>
+            /// <param name="x"></param>
+            /// <param name="y"></param>
+            /// <returns></returns>
+
+            Random rand = new Random();
+
+            for (int i = 0; i < 100; i++)
+            {
+                int x = rand.Next(0, BOARD_SIZE_X);
+                int y = rand.Next(0, BOARD_SIZE_Y);
+                GetTestButton(x, y)?.Toggle();
+                GetTestButton(x + 1, y)?.Toggle();
+                GetTestButton(x - 1, y)?.Toggle();
+                GetTestButton(x, y + 1)?.Toggle();
+                GetTestButton(x, y - 1)?.Toggle();
+
+            }
         }
-        /// <summary>
-        /// TestButtonを取得する関数
-        /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <returns></returns>
 
         public TestButton GetTestButton(int x, int y)
         {
@@ -64,7 +80,7 @@ namespace Form_Test
             return _buttonArray[y, x];
         }
 
-        //初期盤面のランダム化
+
        
 
         private void hogehogeClick(object sender , EventArgs e)
