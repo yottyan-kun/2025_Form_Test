@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace Form_Test
 {
@@ -29,14 +30,14 @@ namespace Form_Test
             _buttonArray = new TestButton[BOARD_SIZE_Y, BOARD_SIZE_X];
 
 
-            for (int j = 0; j < BOARD_SIZE_Y; j++)
+            for (int i = 0; i < BOARD_SIZE_X; i++)
             {
 
 
-                for (int i = 0; i < BOARD_SIZE_X; i++)
+                for (int j = 0; j < BOARD_SIZE_Y; j++)
                 {
                     //インスタンスの生成
-                    TestButton testButton = new TestButton(this,i,j,new Point(BUTTON_SIZE_X * i, BUTTON_SIZE_Y * j), new Size(100, 100 )," ");
+                    TestButton testButton = new TestButton(this,i,j,new Size(BUTTON_SIZE_X , BUTTON_SIZE_Y), "");
 
 
                     //配列にボタンの参照を追加
@@ -49,6 +50,13 @@ namespace Form_Test
             }
            
         }
+        /// <summary>
+        /// TestButtonを取得する関数
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+
         public TestButton GetTestButton(int x, int y)
         {
             if (x < 0 || x >= BOARD_SIZE_X) return null;
@@ -56,16 +64,19 @@ namespace Form_Test
             return _buttonArray[y, x];
         }
 
+        //初期盤面のランダム化
+       
+
         private void hogehogeClick(object sender , EventArgs e)
         {
-            MessageBox.Show("ゆっくりしていってね");
+            MessageBox.Show("クリック");
         }
 
-     
+
 
         private void テストボタン_Click_1(object sender, EventArgs e)
         {
-           
+            MessageBox.Show("クリック");
         }
     }
 }

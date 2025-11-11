@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace Form_Test
 {
-    internal class TestButton : Button
+    public class TestButton : Button
     {
         private Color _onColor = Color.Orange;
         private Color _offColor = Color.White;
@@ -50,21 +52,39 @@ namespace Form_Test
             Click += ClickEvent;
             SetEnable(false);
         }
-        private void ClickEvent(object sender, EventArgs e)
+       
+
+        private void ClickEvent(object sender, EventHandler e)
         {
             _form1.GetTestButton(_x, _y).SetEnable(true);
           
         }
+
+
+        /// <summary>
+        /// 各ボタンがクリックされた時に呼び出される関数
+        /// クリックイベント
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void ClickEvent(object sender, EventArgs e)
         {
             //楽な書き方
-            _form1.GetTestButton(_x, _y)?.Toggle();
-            _form1.GetTestButton(_x+1, _y)?.Toggle();
-            _form1.GetTestButton(_x-1, _y)?.Toggle();
-            _form1.GetTestButton(_x, _y)?.Toggle();
-            _form1.GetTestButton(_x, _y)?.Toggle();
+            for (int i = 0; i < _toggleDate.Length; i++)
+            {
+                var date = _toggleDate[i];
+                var button = _form1.GetTestButton(_x + date[0], _y + date[1]);
 
-        }
+                if (button != null)
+                {
+                    button.Toggle();
+                }
+            }
+        }         
+        
+            
+
         private int[][] _toggleDate =
         {
             new int[]{0,0},
